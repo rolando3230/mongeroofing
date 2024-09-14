@@ -7,7 +7,7 @@ class ContactUsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Color.fromARGB(255, 0, 36, 107), // Background color #20345c
+        color: Color(0xFF080494),
         child: Center(
           child: SingleChildScrollView(
             child: Column(

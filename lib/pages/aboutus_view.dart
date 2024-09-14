@@ -5,7 +5,7 @@ class AboutUsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 36, 107),
+        backgroundColor: Color(0xFF080494),
         title: Center(
           child: Text(
             'Quality Roofing Solutions for a Stronger, Better Home.',
@@ -96,25 +96,37 @@ class AboutUsView extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Our Values',
-                          style: TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Our Values',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
                         ),
                         SizedBox(height: 16.0),
-                        Text(
-                          'At Monge Remodeling, we believe in integrity, quality, and customer satisfaction. These values guide us in every project we undertake, from small repairs to large installations. We take pride in using only the highest-quality materials and ensuring that our work meets the highest standards. Our team is dedicated to delivering excellent craftsmanship and outstanding service.',
-                          style: TextStyle(fontSize: 18),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'At Monge Remodeling, we believe in integrity, quality, and customer satisfaction. These values guide us in every project we undertake, from small repairs to large installations. We take pride in using only the highest-quality materials and ensuring that our work meets the highest standards. Our team is dedicated to delivering excellent craftsmanship and outstanding service.',
+                            style: TextStyle(fontSize: 18),
+                          ),
                         ),
                         SizedBox(height: 16.0),
-                        Text(
-                          'Why Choose Us?',
-                          style: TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Why Choose Us?',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        Text(
-                          'Choosing Monge Remodeling means choosing a partner who is committed to transforming your home with expertise and care. We understand that your home is your most significant investment, and we aim to provide roofing solutions that not only protect but also enhance your property’s value and curb appeal.',
-                          style: TextStyle(fontSize: 18),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Choosing Monge Remodeling means choosing a partner who is committed to transforming your home with expertise and care. We understand that your home is your most significant investment, and we aim to provide roofing solutions that not only protect but also enhance your property’s value and curb appeal.',
+                            style: TextStyle(fontSize: 18),
+                          ),
                         ),
                       ],
                     ),

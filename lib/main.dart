@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
 
   // Define the titles of the sections
   final List<String> _sectionTitles = [
-    'Home',
+    'HOME',
     'ABOUT US',
     'CONTACT US',
   ];
@@ -109,7 +109,9 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
-              color: _selectedIndex == index ? Colors.blue : Colors.transparent,
+              color: _selectedIndex == index
+                  ? Color(0xFF080494)
+                  : Colors.transparent,
               width: 1,
             ),
           ),
@@ -120,7 +122,7 @@ class _HomePageState extends State<HomePage> {
             fontSize: 16,
             fontWeight:
                 _selectedIndex == index ? FontWeight.bold : FontWeight.normal,
-            color: _selectedIndex == index ? Colors.blue : Colors.black,
+            color: _selectedIndex == index ? Color(0xFF080494) : Colors.black,
           ),
         ),
       ),

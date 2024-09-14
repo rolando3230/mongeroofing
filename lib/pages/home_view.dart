@@ -7,7 +7,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Color.fromARGB(255, 0, 36, 107), // Background color #20345c
+        color: Color(0xFF080494), // Background color #20345c
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -188,6 +188,7 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                     color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'Roboto', // Apply the Roboto font
                     shadows: [
                       Shadow(
                         blurRadius: 10.0,
@@ -198,11 +199,12 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 5),
                 Text(
                   'Guided Insurance Process',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Roboto',
                     fontSize: 20,
                     shadows: [
                       Shadow(
@@ -214,11 +216,12 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 5),
                 Text(
                   'Variety Of Financing Options',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Roboto',
                     fontSize: 20,
                     shadows: [
                       Shadow(
@@ -230,11 +233,12 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 5),
                 Text(
                   'Industry-leading Warranty Options',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Roboto',
                     fontSize: 20,
                     shadows: [
                       Shadow(
@@ -251,9 +255,14 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                   onPressed: () {
                     // Action to perform on button press
                   },
-                  child: Text('BOOK AN INSPECTION'),
+                  child: Text(
+                    'BOOK AN INSPECTION',
+                    style: TextStyle(),
+                  ),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                    backgroundColor: Color(0xFF080494), // Background color
+                    foregroundColor: Colors.white, // Text color
                   ),
                 )
               ],
@@ -364,24 +373,25 @@ class _CustomCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: ElevatedButton(
-                onPressed: () async {
-                  final Uri uri = Uri.parse(buttonUrl);
-                  if (await canLaunchUrl(uri)) {
-                    await launchUrl(uri);
-                  } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Could not launch $buttonUrl')),
-                    );
-                  }
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue, // Button background color set to blue
-                ),
-                child: Text('More Info'),
-              ),
-            ),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: ElevatedButton(
+                  onPressed: () async {
+                    final Uri uri = Uri.parse(buttonUrl);
+                    if (await canLaunchUrl(uri)) {
+                      await launchUrl(uri);
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Could not launch $buttonUrl')),
+                      );
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                        Color(0xFF080494), // Custom background color
+                    foregroundColor: Colors.white, // White text color
+                  ),
+                  child: Text('More Info'),
+                )),
           ],
         ),
       ),
