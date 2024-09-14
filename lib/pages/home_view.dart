@@ -345,11 +345,9 @@ class _CustomCard extends StatelessWidget {
               borderRadius: BorderRadius.vertical(
                   top: Radius.circular(
                       12)), // Rounded corners for the top part of the image
-              child: Expanded(
-                child: Image.asset(
-                  imageUrl,
-                  fit: BoxFit.cover,
-                ),
+              child: Image.asset(
+                imageUrl,
+                fit: BoxFit.cover,
               ),
             ),
             SizedBox(height: 8),
