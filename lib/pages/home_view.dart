@@ -21,19 +21,14 @@ class HomeView extends StatelessWidget {
                       CrossAxisAlignment.start, // Aligns children to the top
                   children: [
                     _ContactItem(
-                      location: 'Hilton Head Island, SC',
-                      phone: '823-8320-2238',
+                      location: 'Baton Rouge La',
+                      phone: '708-1522-58884477',
                       url: 'https://example.com/hilton-head',
                     ),
                     _ContactItem(
-                      location: 'Myrtle Beach, SC',
-                      phone: '843-543-2232',
+                      location: 'Lafayette La',
+                      phone: '705-133-277035466',
                       url: 'https://example.com/myrtle-beach',
-                    ),
-                    _ContactItem(
-                      location: 'Wilmington, NC',
-                      phone: '910-601-9633',
-                      url: 'https://example.com/wilmington',
                     ),
                   ],
                 ),
