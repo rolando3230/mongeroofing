@@ -9,7 +9,10 @@ class AboutUsView extends StatelessWidget {
         title: Center(
           child: Text(
             'Quality Roofing Solutions for a Stronger, Better Home.',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Roboto'),
           ),
         ),
       ),
@@ -52,32 +55,38 @@ class AboutUsView extends StatelessWidget {
                       Text(
                         'Monge Remodeling',
                         style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
+                            fontFamily: 'Roboto',
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 16.0), // Space below the title
                       Text(
                         'Welcome to Monge Remodeling, where we bring a blend of expertise, craftsmanship, and dedication to every roofing project. With a strong reputation in the remodeling industry, we specialize in roofing installation and are committed to delivering exceptional results that enhance both the functionality and aesthetics of your property.',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 18, fontFamily: 'Roboto'),
                       ),
                       SizedBox(height: 16.0), // Space between sections
                       Text(
                         'Our Story',
                         style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold),
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Roboto'),
                       ),
                       Text(
                         'Founded with a vision to provide top-tier remodeling services, Monge Remodeling has grown into a trusted name in roofing installation. Our journey began with a passion for quality craftsmanship and a commitment to customer satisfaction. Over the years, we have built a team of skilled professionals who share our dedication to excellence and our goal of exceeding client expectations.',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 18, fontFamily: 'Roboto'),
                       ),
                       SizedBox(height: 16.0), // Space between sections
                       Text(
                         'Our Mission',
                         style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold),
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Roboto'),
                       ),
                       Text(
                         'At Monge Remodeling, our mission is to offer superior roofing solutions that combine durability, style, and value. We believe that a roof should do more than just protect—it should also enhance the overall look and feel of your home or business. Our goal is to provide our clients with roofing systems that not only meet their needs but also stand the test of time.',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 18, fontFamily: 'Roboto'),
                       ),
                     ],
                   ),
@@ -101,7 +110,9 @@ class AboutUsView extends StatelessWidget {
                           child: Text(
                             'Our Values',
                             style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Roboto'),
                           ),
                         ),
                         SizedBox(height: 16.0),
@@ -109,7 +120,8 @@ class AboutUsView extends StatelessWidget {
                           padding: EdgeInsets.all(8.0),
                           child: Text(
                             'At Monge Remodeling, we believe in integrity, quality, and customer satisfaction. These values guide us in every project we undertake, from small repairs to large installations. We take pride in using only the highest-quality materials and ensuring that our work meets the highest standards. Our team is dedicated to delivering excellent craftsmanship and outstanding service.',
-                            style: TextStyle(fontSize: 18),
+                            style:
+                                TextStyle(fontSize: 18, fontFamily: 'Roboto'),
                           ),
                         ),
                         SizedBox(height: 16.0),
@@ -118,14 +130,17 @@ class AboutUsView extends StatelessWidget {
                           child: Text(
                             'Why Choose Us?',
                             style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Roboto'),
                           ),
                         ),
                         Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
                             'Choosing Monge Remodeling means choosing a partner who is committed to transforming your home with expertise and care. We understand that your home is your most significant investment, and we aim to provide roofing solutions that not only protect but also enhance your property’s value and curb appeal.',
-                            style: TextStyle(fontSize: 18),
+                            style:
+                                TextStyle(fontSize: 18, fontFamily: 'Roboto'),
                           ),
                         ),
                       ],
@@ -178,6 +193,7 @@ class Footer extends StatelessWidget {
             'Connect With Us',
             style: TextStyle(
               fontSize: 16,
+              fontFamily: 'Roboto',
               fontWeight: FontWeight.bold,
               color: Colors.white, // Text color
             ),
@@ -211,9 +227,9 @@ class Footer extends StatelessWidget {
           Text(
             'Copyright © 2024 Monge Remodeling. All rights reserved.',
             style: TextStyle(
-              fontSize: 14,
-              color: Colors.white, // Text color
-            ),
+                fontSize: 14,
+                color: Colors.white, // Text color
+                fontFamily: 'Roboto'),
           ),
         ],
       ),

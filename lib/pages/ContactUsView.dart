@@ -117,6 +117,7 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                   'Contact Our Experts',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Roboto',
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     shadows: [
@@ -134,6 +135,7 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                   'We have established a superior quality roofing business to help add value and protect.',
                   style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Roboto',
                     fontSize: 20,
                     shadows: [
                       Shadow(
@@ -218,6 +220,7 @@ class Footer extends StatelessWidget {
             'Connect With Us',
             style: TextStyle(
               fontSize: 16,
+              fontFamily: 'Roboto',
               fontWeight: FontWeight.bold,
               color: Colors.white, // Text color
             ),
@@ -252,6 +255,7 @@ class Footer extends StatelessWidget {
             'Copyright © 2024 Monge Remodeling. All rights reserved.',
             style: TextStyle(
               fontSize: 14,
+              fontFamily: 'Roboto',
               color: Colors.white, // Text color
             ),
           ),
@@ -415,13 +419,18 @@ class _ContactFormState extends State<ContactForm> {
             ),
             SizedBox(height: 16),
             Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  // Handle form submission
-                },
-                child: Text('Submit'),
+                child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: const Color(0xFF080494), // New background color
               ),
-            ),
+              onPressed: () {
+                // Handle form submission
+              },
+              child: Text(
+                'Submit',
+                style: TextStyle(fontFamily: 'Roboto', color: Colors.white),
+              ),
+            )),
           ],
         ));
   }

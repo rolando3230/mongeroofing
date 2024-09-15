@@ -119,6 +119,7 @@ class _HomePageState extends State<HomePage> {
         child: Text(
           title,
           style: TextStyle(
+            fontFamily: 'Roboto',
             fontSize: 16,
             fontWeight:
                 _selectedIndex == index ? FontWeight.bold : FontWeight.normal,

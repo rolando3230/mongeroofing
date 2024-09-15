@@ -5,6 +5,9 @@ import 'package:url_launcher/url_launcher.dart';
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // Get the width of the screen
+    var screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Container(
         color: Color(0xFF080494), // Background color #20345c
@@ -19,12 +22,12 @@ class HomeView extends StatelessWidget {
                   children: [
                     _ContactItem(
                       location: 'Hilton Head Island, SC',
-                      phone: '843-800-4418',
+                      phone: '823-8320-2238',
                       url: 'https://example.com/hilton-head',
                     ),
                     _ContactItem(
                       location: 'Myrtle Beach, SC',
-                      phone: '843-507-5732',
+                      phone: '843-543-2232',
                       url: 'https://example.com/myrtle-beach',
                     ),
                     _ContactItem(
@@ -38,62 +41,9 @@ class HomeView extends StatelessWidget {
                 // Image Slider Section
                 ImageSliderWithText(), // Adding the image slider here
 
-                Container(
-                  color: Colors.white, // Set the background color to white
-                  child: const Column(
-                    children: [
-                      SizedBox(
-                        height: 25,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          _CustomCard(
-                            imageUrl: 'assets/images/12.jpg',
-                            description: 'Residential',
-                            buttonUrl: 'https://example.com/card-2',
-                          ),
-                          _CustomCard(
-                            imageUrl: 'assets/images/1.jpg',
-                            description: 'Business',
-                            buttonUrl: 'https://example.com/card-2',
-                          ),
-                          _CustomCard(
-                            imageUrl: 'assets/images/11.jpg',
-                            description: 'Property Management',
-                            buttonUrl: 'https://example.com/card-1',
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          _CustomCard(
-                            imageUrl: 'assets/images/5.jpg',
-                            description: 'Maintenance Inspection  ',
-                            buttonUrl: 'https://example.com/card-2',
-                          ),
-                          _CustomCard(
-                            imageUrl: 'assets/images/3.jpg',
-                            description: 'Repairs',
-                            buttonUrl: 'https://example.com/card-2',
-                          ),
-                          _CustomCard(
-                            imageUrl: 'assets/images/6.jpg',
-                            description: 'Commercial Flat Roof',
-                            buttonUrl: 'https://example.com/card-2',
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20,
-                      )
-                    ],
-                  ),
-                ),
+                // Use servicecardmobile() if on mobile, otherwise servicecard()
+                screenWidth < 600 ? servicecardmobile() : servicecard(),
+
                 ClientFeedbackSection(),
                 Footer(),
 
@@ -105,6 +55,65 @@ class HomeView extends StatelessWidget {
       ),
     );
   }
+}
+
+Container servicecard() {
+  return Container(
+    color: Colors.white, // Set the background color to white
+    child: const Column(
+      children: [
+        SizedBox(
+          height: 25,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _CustomCard(
+              imageUrl: 'assets/images/12.jpg',
+              description: 'Residential',
+              buttonUrl: 'https://example.com/card-2',
+            ),
+            _CustomCard(
+              imageUrl: 'assets/images/1.jpg',
+              description: 'Business',
+              buttonUrl: 'https://example.com/card-2',
+            ),
+            _CustomCard(
+              imageUrl: 'assets/images/11.jpg',
+              description: 'Property Management',
+              buttonUrl: 'https://example.com/card-1',
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _CustomCard(
+              imageUrl: 'assets/images/5.jpg',
+              description: 'Maintenance Inspection  ',
+              buttonUrl: 'https://example.com/card-2',
+            ),
+            _CustomCard(
+              imageUrl: 'assets/images/3.jpg',
+              description: 'Repairs',
+              buttonUrl: 'https://example.com/card-2',
+            ),
+            _CustomCard(
+              imageUrl: 'assets/images/6.jpg',
+              description: 'Commercial Flat Roof',
+              buttonUrl: 'https://example.com/card-2',
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 20,
+        )
+      ],
+    ),
+  );
 }
 
 class ImageSliderWithText extends StatefulWidget {
@@ -185,10 +194,10 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                 Text(
                   'Best Installation, Best Warranties, Best Service.',
                   style: TextStyle(
+                    fontFamily: 'Roboto',
                     color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Roboto', // Apply the Roboto font
                     shadows: [
                       Shadow(
                         blurRadius: 10.0,
@@ -257,7 +266,8 @@ class _ImageSliderWithTextState extends State<ImageSliderWithText> {
                   },
                   child: Text(
                     'BOOK AN INSPECTION',
-                    style: TextStyle(),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontFamily: 'Roboto'),
                   ),
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
@@ -390,7 +400,11 @@ class _CustomCard extends StatelessWidget {
                         Color(0xFF080494), // Custom background color
                     foregroundColor: Colors.white, // White text color
                   ),
-                  child: Text('More Info'),
+                  child: Text(
+                    'Read More',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontFamily: 'Roboto'),
+                  ),
                 )),
           ],
         ),
@@ -449,7 +463,7 @@ class _ClientFeedbackSectionState extends State<ClientFeedbackSection> {
     },
     {
       'image': 'assets/images/FF.png',
-      'name': 'Client 2',
+      'name': 'Franz Abegail',
       'rating': 4.5,
       'description': 'Very satisfied with the product.',
       'logo': 'assets/images/G.png',
@@ -716,4 +730,65 @@ class Footer extends StatelessWidget {
       ),
     );
   }
+}
+
+Container servicecardmobile() {
+  return Container(
+    color: Colors.white, // Set the background color to white
+    child: const Column(
+      children: [
+        SizedBox(
+          height: 25,
+        ),
+        _CustomCard(
+          imageUrl: 'assets/images/12.jpg',
+          description: 'Residential',
+          buttonUrl: 'https://example.com/card-2',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        _CustomCard(
+          imageUrl: 'assets/images/1.jpg',
+          description: 'Business',
+          buttonUrl: 'https://example.com/card-2',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        _CustomCard(
+          imageUrl: 'assets/images/11.jpg',
+          description: 'Property Management',
+          buttonUrl: 'https://example.com/card-1',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        _CustomCard(
+          imageUrl: 'assets/images/5.jpg',
+          description: 'Maintenance Inspection',
+          buttonUrl: 'https://example.com/card-2',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        _CustomCard(
+          imageUrl: 'assets/images/3.jpg',
+          description: 'Repairs',
+          buttonUrl: 'https://example.com/card-2',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        _CustomCard(
+          imageUrl: 'assets/images/6.jpg',
+          description: 'Commercial Flat Roof',
+          buttonUrl: 'https://example.com/card-2',
+        ),
+        SizedBox(
+          height: 20,
+        )
+      ],
+    ),
+  );
 }
