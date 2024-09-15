@@ -21,13 +21,13 @@ class HomeView extends StatelessWidget {
                       CrossAxisAlignment.start, // Aligns children to the top
                   children: [
                     _ContactItem(
-                      location: 'Baton Rouge La',
-                      phone: '708-1522-58884477',
+                      location: 'Lafayette La',
+                      phone: '705-0133-77035466',
                       url: 'https://example.com/hilton-head',
                     ),
                     _ContactItem(
-                      location: 'Lafayette La',
-                      phone: '705-133-277035466',
+                      location: 'Baton Rouge La ',
+                      phone: '708-5225-884477',
                       url: 'https://example.com/myrtle-beach',
                     ),
                   ],
