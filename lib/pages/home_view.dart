@@ -734,7 +734,6 @@ class Footer extends StatelessWidget {
 
 Container servicecardmobile() {
   return Container(
-    color: Colors.white, // Set the background color to white
     child: const Column(
       children: [
         SizedBox(
